@@ -4,17 +4,17 @@
     object-fit: cover;
     background-color: lightblue;
   }
-  
-.content img {
-    background-image: url('~../../image/background-main.jpg');
-    width: 100%;
-    max-height: 200px;
-}
 
 .posts {
-  background: honeydew;
+    background: honeydew;
 }
 
 .item {
-  color: green;
+    color: green;
+}
+
+.background {
+    background-image: url('../../image/background-main.jpg');
+    width: 100%;
+    max-height: 200px;
 }

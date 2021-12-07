@@ -5,12 +5,9 @@ import backgroundMain from '../../image/background-main.jpg';
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <div>
             <div>
-                <img src={backgroundMain} alt="background"></img>
-            </div>
-            <div>
-                ava + description
+                ava + description!!
             </div>
             <MyPosts />
         </div>

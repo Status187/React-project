@@ -6,8 +6,8 @@
   }
   
 .content img {
-    background-image: url('~../../../image/background-main.jpg');
-    width: 100%;
+    background-image: url('../../../image/background-main.jpg');
+    width: 10%;
     max-height: 200px;
 }
 

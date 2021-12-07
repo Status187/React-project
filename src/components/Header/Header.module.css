@@ -2,7 +2,7 @@
 .header {
     grid-area: h;
     height: 200px;
-    background-color: tomato;
+    background-color: #290044;
 }
   
 .header img {

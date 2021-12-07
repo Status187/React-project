@@ -2,8 +2,21 @@
     grid-area: n;
     width: 100%;
     background-color: lightgreen;
+    padding: 20px;
 }
 
 .item {
   color: red;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a.active-link {
+    color: black;
+    background-color: aqua;
+    font-size: 40px;
+    width: 400px;
 }

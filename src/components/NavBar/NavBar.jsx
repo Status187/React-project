@@ -1,23 +1,27 @@
 import React from 'react';
-import c from './NavBar.module.css';
+import s from './NavBar.module.css';
+import {NavLink} from "react-router-dom";
+
+const setActive = ({isActive}) => isActive ? 'active-link' : '';
+const setColor = ({isActive}) => ({color: isActive ? 'black' : 'white'});
 
 const Nav = () => {
     return (
-        <nav className={c.nav}>
-            <div className={c.item}>
-                <a>Profile</a>
+        <nav className={s.nav}>
+            <div className={s.item}>
+                <NavLink to="/profile" style={setColor} className={setActive}>Profile</NavLink>
             </div>
-            <div className={c.item}>
-                <a>Messages</a>
+            <div className={s.item}>
+                <NavLink to="/dialogs" style={setColor} className={setActive}>Messages</NavLink>
             </div>
-            <div className={c.item}>
-                <a>News</a>
+            <div className={s.item}>
+                <NavLink to="/news" style={setColor} className={setActive}>News</NavLink>
             </div>
-            <div className={c.item}>
-                <a>Music</a>
+            <div className={s.item}>
+                <NavLink to="/music" style={setColor} className={setActive}>Music</NavLink>
             </div>
-            <div className={c.item}>
-                <a>Settings</a>
+            <div className={s.item}>
+                <NavLink to="/settings" style={setColor} className={setActive}>Settings</NavLink>
             </div>
         </nav>
     )
