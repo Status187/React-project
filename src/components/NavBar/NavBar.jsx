@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 
 const setActive = ({isActive}) => isActive ? 'active-link' : '';
 const setColor = ({isActive}) => ({color: isActive ? 'black' : 'white'});
+export { setActive };
 
 const Nav = () => {
     return (
