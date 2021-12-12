@@ -8,8 +8,8 @@ const ProfileInfo = () => {
             <div>
                 <img src={avatar} alt='avatar'></img>
             </div>
-            <div>
-                ava + description!!
+            <div className={s.descriptionBlock}>
+                ava + description!!!
             </div>
         </div>
     )

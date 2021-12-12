@@ -8,9 +8,6 @@ const Profile = () => {
     return (
         <div>
             <ProfileInfo />
-            <div>
-                ava + description!!
-            </div>
             <MyPosts />
         </div>
     )

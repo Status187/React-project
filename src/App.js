@@ -30,7 +30,7 @@ const App = (props) => {
                     </Routes>
 
                 </div>
-                <Content/>
+                {/*<Content/>*/}
             </div>
         </BrowserRouter>
     );

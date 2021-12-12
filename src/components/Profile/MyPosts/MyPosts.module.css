@@ -13,8 +13,13 @@
 
 .posts {
   background: honeydew;
+    margin-top: 20px;
 }
 
 .item {
   color: green;
+}
+
+.postsBlock {
+    padding: 10px;
 }
