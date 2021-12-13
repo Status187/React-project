@@ -6,7 +6,7 @@ const setActive = ({isActive}) => isActive ? 'active-link' : '';
 const setColor = ({isActive}) => ({color: isActive ? 'black' : 'white'});
 export { setActive };
 
-const Nav = () => {
+const Nav = (props) => {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
