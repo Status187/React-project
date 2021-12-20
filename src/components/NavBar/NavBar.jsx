@@ -24,6 +24,9 @@ const Nav = (props) => {
             <div className={s.item}>
                 <NavLink to="/settings" style={setColor} className={setActive}>Settings</NavLink>
             </div>
+            <div className={s.item}>
+                <NavLink to="/friends" style={setColor} className={setActive}>Friends</NavLink>
+            </div>
         </nav>
     )
 }
