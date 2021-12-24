@@ -1,4 +1,8 @@
-import {rerenderEntireTree} from "../render";
+import {observe} from "web-vitals/dist/modules/lib/observe";
+
+let rerenderEntireTree = () => {
+    console.log('State changed')
+}
 
 let state = {
     profilePage: {
@@ -10,6 +14,7 @@ let state = {
             {id: 5, message: 'too', likesCount: 2},
             {id: 6, message: 'I see', likesCount: 1},
         ],
+        newPostText: 'it-status'
 
     },
     dialogsPage: {
@@ -40,14 +45,28 @@ let state = {
     },
 };
 
-export let addPost = (postMessage) => {
+window.state = state;
+
+export const addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0,
     };
     state.profilePage.posts.push(newPost);
-    // rerenderEntireTree(state);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+}
+
+export const updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export const subscribe = (observe) => {
+    rerenderEntireTree = observe;
 }
 
 export default state;
+
+// store - OOP

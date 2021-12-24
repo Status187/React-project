@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './../Dialogs.module.css';
-import ava_1 from '../../../image/ava_1.webp';
 import ava_2 from '../../../image/ava_2.webp';
 
 const Avatar = (props) => {
