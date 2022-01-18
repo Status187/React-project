@@ -3,30 +3,19 @@ import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 import Avatar from './Avatar/Avatar';
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/state";
+import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
 
     let state = props.store.getState().dialogsPage;
 
-    let avatarElements =
-        state.avatar.map( a => <Avatar url={a.src} />);
+    let avatarElements = state.avatar.map( a => <Avatar url={a.id} />);
 
-    let dialogsElements =
-        state.dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
+    let dialogsElements = state.dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
 
-    let messagesElements =
-        state.messages.map( m => <Message message={m.message} />);
+    let messagesElements = state.messages.map( m => <Message message={m.message} />);
 
-    let newMessageBody =
-        state.newMessageBody;
-
-    // let newSubmitElement = React.createRef();
-    //
-    // let addPost = () => {
-    //     let text = newSubmitElement.current.value;
-    //     alert(text);
-    // }
+    let newMessageBody = state.newMessageBody;
 
     let onSendMessageClick = () => {
         props.store.dispatch(sendMessageCreator());
