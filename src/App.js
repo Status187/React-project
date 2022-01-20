@@ -9,6 +9,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import Friends from "./components/Friends/Friends";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
 
@@ -21,13 +22,9 @@ const App = (props) => {
 
                     <Routes>
                         <Route path='/dialogs'
-                               element={<Dialogs store={props.store} />}/>
+                               element={<DialogsContainer store={props.store} />}/>
                         <Route path='/profile'
-                               element={<Profile profilePage={props.state.profilePage}
-                                                 addPost={props.addPost}
-                                                updateNewPostText={props.updateNewPostText}
-                                                 dispatch={props.dispatch}
-                               />}/>
+                               element={<Profile store={props.store} />}/>
                         <Route path='/news'
                                element={<News />}/>
                         <Route path='/music'
