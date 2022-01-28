@@ -22,3 +22,10 @@ code {
   color: saddlebrown;
   font-size: 30px;
 }
+
+.app-wrapper__content {
+  padding: 30px ;
+  background-color: beige ;
+  border-left: 3px solid #290044;
+  border-right: 3px solid #290044;
+}
