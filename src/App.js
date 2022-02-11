@@ -6,10 +6,10 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import Friends from "./components/Friends/Friends";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
+import {BrowserRouter, Route} from "react-router-dom";
 
 const App = (props) => {
 
@@ -20,22 +20,23 @@ const App = (props) => {
                 <NavBar/>
                 <div className='app-wrapper__content'>
 
-                    <Routes>
                         <Route path='/dialogs'
-                               element={<DialogsContainer />}/>
+                               render={ () => <DialogsContainer />}/>
+
                         <Route path='/profile'
-                               element={<ProfileContainer />}/>
+                               render={ () => <ProfileContainer />}/>
+
                         <Route path='/users'
-                               element={<UsersContainer />}/>
+                               render={ () => <UsersContainer />}/>
+
                         <Route path='/news'
-                               element={<News />}/>
+                               render={ () => <News />}/>
                         <Route path='/music'
-                               element={<Music />}/>
+                               render={ () => <Music />}/>
                         <Route path='/settings'
-                               element={<Settings />}/>
+                               render={ () => <Settings />}/>
                         <Route path='/settings'
-                               element={<Friends />}/>
-                    </Routes>
+                               render={ () => <Friends />}/>
 
                 </div>
             </div>

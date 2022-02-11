@@ -3,7 +3,12 @@ import s from './ProfileInfo.module.css';
 import avatar from '../../../image/ava-mask.png';
 import Preloader from "../../common/Preloader/Preloader";
 
+
+
 const ProfileInfo = (props) => {
+
+    // let giveAJobSearchValue = props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу';
+    let giveAJobSearchValue = (props) => {props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу'};
 
     if (!props.profile) {
         return <Preloader />
@@ -26,7 +31,9 @@ const ProfileInfo = (props) => {
                     <span>-{props.profile.contacts.instagram}</span>
                 </div>
                 <div>lookingForAJob?<br/>
-                    <span>-{props.profile.lookingForAJob}{props.profile.lookingForAJobDescription}</span>
+                    {/*<span>-{props.profile.lookingForAJob}{props.profile.lookingForAJobDescription}</span>*/}
+                    <span>-{props.profile.lookingForAJob}{giveAJobSearchValue}</span><br/>
+                    <span>-{props.profile.lookingForAJobDescription}</span>
                 </div>
             </div>
         </div>
