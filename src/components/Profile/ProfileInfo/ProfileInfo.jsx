@@ -7,16 +7,21 @@ import Preloader from "../../common/Preloader/Preloader";
 
 const ProfileInfo = (props) => {
 
-    // let giveAJobSearchValue = props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу';
-    let giveAJobSearchValue = (props) => {props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу'};
+    // let giveAJobSearchValue =  props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу';
+    // let giveAJobSearchValue;
+    //     if (props.profile.lookingForAJob === true ) {
+    //         giveAJobSearchValue = 'Ищу работу'
+    //     }  else {
+    //         giveAJobSearchValue = 'Не ищу работу'
+    //     };
 
     if (!props.profile) {
         return <Preloader />
     }
     return (
         <div>
-            <div>UserId:<br/>
-                <span>-{props.profile.userId}</span><br/>
+            <div>Id:
+                <span> № {props.profile.userId}</span><br/>
             </div>
             <div>
                 <img src={avatar} alt='avatar'></img>
@@ -32,7 +37,7 @@ const ProfileInfo = (props) => {
                 </div>
                 <div>lookingForAJob?<br/>
                     {/*<span>-{props.profile.lookingForAJob}{props.profile.lookingForAJobDescription}</span>*/}
-                    <span>-{props.profile.lookingForAJob}{giveAJobSearchValue}</span><br/>
+                    <span>-{props.profile.lookingForAJob}</span><br/>
                     <span>-{props.profile.lookingForAJobDescription}</span>
                 </div>
             </div>
