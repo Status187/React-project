@@ -1,13 +1,12 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import avatar from '../../../image/ava-mask.png';
-import Preloader from "../../common/Preloader/Preloader";
-
-
+import Preloader from '../../common/Preloader/Preloader';
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
 
-    // let giveAJobSearchValue =  props.profile.lookingForAJob ? 'Ищу работу' : 'Не ищу работу';
+    // let giveAJobSearchValue =  (props.profile.lookingForAJob) ? 'Ищу работу' : 'Не ищу работу';
     // let giveAJobSearchValue;
     //     if (props.profile.lookingForAJob === true ) {
     //         giveAJobSearchValue = 'Ищу работу'
@@ -24,10 +23,11 @@ const ProfileInfo = (props) => {
                 <span> № {props.profile.userId}</span><br/>
             </div>
             <div>
-                <img src={avatar} alt='avatar'></img>
+                <img src={avatar} alt='avatar'/>
             </div>
             <div className={s.descriptionBlock}>
                 <img src={props.profile.photos.large} />
+                <ProfileStatus status={"Hello my friends"}/>
                 <div>{props.profile.fullName}</div>
                 <div>{props.profile.aboutMe}</div>
                 <div>Contacts:<br/>
