@@ -9,7 +9,8 @@ const setColor = ({isActive}) => ({color: isActive ? 'white' : 'black'});
 const DialogItem = (props) => {
     return (
         <div className={s.dialogs + ' ' + s.active}>
-            <NavLink to={"/dialogs/1" + props.id} style={setColor} className={setActive}>{props.name}</NavLink>
+            {/*<NavLink to={"/dialogs/1" + props.id} style={setColor} className={setActive}>{props.name}</NavLink>*/}
+            <NavLink to={"/dialogs/1" + props.id}>{props.name}</NavLink>
         </div>
     )
 }
