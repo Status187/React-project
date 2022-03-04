@@ -12,25 +12,25 @@ const Nav = (props) => {
     return (
         <nav className={s.nav}>
             <div className={s.item}>
-                <NavLink to="/profile"className={setActive}>Profile</NavLink>
+                <NavLink to="/profile" >Profile</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/dialogs" className={setActive}>Messages</NavLink>
+                <NavLink to="/dialogs" >Messages</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/users" className={setActive}>Users</NavLink>
+                <NavLink to="/users" >Users</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/news" className={setActive}>News</NavLink>
+                <NavLink to="/news" >News</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/music" className={setActive}>Music</NavLink>
+                <NavLink to="/music" >Music</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/settings" className={setActive}>Settings</NavLink>
+                <NavLink to="/settings" >Settings</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/friends" className={setActive}>Friends</NavLink>
+                <NavLink to="/friends" >Friends</NavLink>
             </div>
         </nav>
     )
