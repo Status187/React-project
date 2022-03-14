@@ -5,11 +5,13 @@ import React from "react";
 
 const maxLength50 = maxLengthCreator(50);
 
-export const AddMessageForm = (props) => {
+const AddMessageForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field component={Textarea} validate={[required, maxLength50]} name='newMessageBody' placeholder='Enter your message' />
+                <Field component={Textarea}
+                       validate={[required, maxLength50]}
+                       name='newMessageBody' placeholder='Enter your message' />
             </div>
             <div>
                 <button>Send</button>
@@ -18,4 +20,5 @@ export const AddMessageForm = (props) => {
     )
 }
 
-// const AddMessageFormRedux = reduxForm({form: 'dialogsAddMessageForm'}) (AddMessageForm)
+export default reduxForm({form: 'dialog-add-message-form'}) (AddMessageForm)
+
